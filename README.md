@@ -1,7 +1,7 @@
 https://github.com/nu0ma/sticky-counter/assets/29624403/c4f5b1d3-4b18-4b73-9f97-e2b888dda9e1
 
-
 ---
+
 Below are the steps to get your plugin running. You can also find instructions at:
 
 https://www.figma.com/plugin-docs/plugin-quickstart-guide/
