@@ -1,17 +1,26 @@
-<h2>Shape & Connector Creator</h2>
-<p>Count: <input id="count" type="number" value="5"></p>
-<button id="create">Create</button>
-<button id="cancel">Cancel</button>
-<script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Sum for Query in Selection</title>
+</head>
+<body>
+    <label for="query">Query:</label>
+    <input type="text" id="query" />
+    <button id="calculate">Calculate Sum</button>
+    <div id="result"></div>
 
-document.getElementById('create').onclick = () => {
-  const textbox = document.getElementById('count');
-  const count = parseInt(textbox.value, 10);
-  parent.postMessage({ pluginMessage: { type: 'create-shapes', count } }, '*')
-}
+    <script>
+        document.getElementById('calculate').onclick = () => {
+            const query = document.getElementById('query').value;
+            parent.postMessage({ pluginMessage: { type: 'calculate-sum-for-query-in-selection', query } }, '*');
+        };
 
-document.getElementById('cancel').onclick = () => {
-  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-}
-
-</script>
+        window.onmessage = event => {
+            const { type, sum } = event.data.pluginMessage;
+            if (type === 'sum-result') {
+                document.getElementById('result').innerText = `Sum: ${sum}`;
+            }
+        };
+    </script>
+</body>
+</html>
