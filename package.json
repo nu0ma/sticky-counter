@@ -1,16 +1,21 @@
 {
   "name": "increase-story-selector",
   "version": "1.0.0",
-  "description": "Your Figma Plugin",
+  "description": "A Figma plugin to count the story point",
   "main": "code.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "watch": "npm run build -- --watch"
+    "watch": "npm run build -- --watch",
+    "lint": "biome lint .",
+    "fmt": "prettier -w . && biome format --write .",
+    "check": "biome check --apply ."
   },
   "author": "",
   "license": "",
   "devDependencies": {
+    "@biomejs/biome": "1.5.3",
     "@figma/plugin-typings": "*",
+    "prettier": "^3.2.5",
     "typescript": "*"
   }
 }
