@@ -2,7 +2,7 @@ figma.showUI(__html__, { width: 400, height: 220 });
 
 figma.ui.onmessage = (msg) => {
   if (msg.type === "calculate-sum-for-query-in-selection") {
-    const regexNumbers = /\[\d+\]/g;
+    const regexNumbers = /\[\d+(\.\d+)?\]/g;
 
     const selectedNodes = figma.currentPage.selection.filter(
       (node) =>
@@ -15,7 +15,7 @@ figma.ui.onmessage = (msg) => {
       const matches = node.text.characters.match(regexNumbers);
       if (matches) {
         for (const match of matches) {
-          const number = parseInt(match.slice(1, -1), 10);
+          const number = parseFloat(match.slice(1, -1));
           sum += number;
         }
       }
