@@ -1,4 +1,4 @@
-https://github.com/nu0ma/sticky-counter/assets/29624403/c4f5b1d3-4b18-4b73-9f97-e2b888dda9e1
+https://github.com/nu0ma/sticky-counter/assets/29624403/967548a1-4de6-4505-b770-af08086f9e65
 
 ---
 
