@@ -1,3 +1,5 @@
+# How to use
+
 https://github.com/nu0ma/sticky-counter/assets/29624403/967548a1-4de6-4505-b770-af08086f9e65
 
 ---
